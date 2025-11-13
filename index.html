@@ -315,6 +315,8 @@
             font-weight: 600;
             border-radius: 8px;
             margin: 0 0.2rem;
+            text-decoration: none;
+            color: inherit;
         }
 
         .nav-tab:hover {
@@ -405,6 +407,40 @@
             display: block;
         }
 
+        /* Estilos para el dragón */
+        .dragon-container.top-left {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 2000;
+        }
+
+        .dragon-animado {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            opacity: 0.9;
+            animation: giroDragon 8s infinite linear;
+            transform-origin: center;
+            box-shadow: 0 0 15px rgba(0, 150, 255, 0.5);
+            filter: brightness(1.1) contrast(1.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* 🔄 Animación: gira continuamente como un disco de música */
+        @keyframes giroDragon {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Efecto de brillo al pasar el mouse */
+        .dragon-animado:hover {
+            animation-duration: 3s;
+            box-shadow: 0 0 25px rgba(0, 200, 255, 0.8);
+            filter: brightness(1.3) contrast(1.2);
+        }
+
         @media (max-width: 768px) {
             .protocol-section {
                 flex-direction: column;
@@ -434,6 +470,16 @@
             
             .member {
                 flex: 1 1 calc(50% - 1rem);
+            }
+            
+            .dragon-container.top-left {
+                top: 15px;
+                left: 15px;
+            }
+            
+            .dragon-animado {
+                width: 60px;
+                height: 60px;
             }
         }
 
@@ -467,6 +513,11 @@
         </svg>
     </button>
 
+    <!-- Dragón animado estilo Kali Linux - ESQUINA SUPERIOR IZQUIERDA -->
+    <div class="dragon-container top-left">
+        <img src="images/kali2.jpg" alt="Dragón Kali Linux" class="dragon-animado">
+    </div>
+
     <header>
         <div class="container">
             <h1>Protocolos de Seguridad en la Red</h1>
@@ -477,9 +528,12 @@
     <div class="container">
         <div class="nav-tabs">
             <div class="nav-tab active" data-tab="home">Inicio</div>
-            <div class="nav-tab" data-tab="protocols">Protocolos</div>
-            <div class="nav-tab" data-tab="team">Equipo</div>
-            <div class="nav-tab" data-tab="references">Referencias</div>
+            <div class="nav-tab" data-tab="team1">Equipo 1</div>
+            <div class="nav-tab" data-tab="team2">Equipo 2</div>
+            <div class="nav-tab" data-tab="team3">Equipo 3</div>
+            <div class="nav-tab" data-tab="team4">Equipo 4</div>
+            <div class="nav-tab" data-tab="team5">Equipo 5</div>
+            <div class="nav-tab" data-tab="team6">Equipo 6</div>
         </div>
 
         <div id="home" class="tab-content active">
@@ -501,95 +555,26 @@
             </div>
         </div>
 
-        <div id="protocols" class="tab-content">
-            <h2>Protocolos de Seguridad</h2>
-            <p>Nuestro equipo está investigando los protocolos IPSec y SET:</p>
-            
-            <div class="protocol-section">
-                <div class="protocol-card card">
-                    <div class="protocol-icon">🔒</div>
-                    <h3>IPSec (Internet Protocol Security)</h3>
-                    <p><strong>Función principal:</strong> IPSec es un conjunto de protocolos que proporciona seguridad a nivel de red para las comunicaciones a través de redes IP. Su función principal es asegurar las comunicaciones mediante autenticación y cifrado de cada paquete IP en una sesión de comunicación.</p>
-                    
-                    <p><strong>Capa del modelo OSI:</strong> Capa de red (Capa 3)</p>
-                    
-                    <p><strong>Tipo de seguridad que ofrece:</strong> 
-                        <ul>
-                            <li>Cifrado de datos</li>
-                            <li>Autenticación de origen de datos</li>
-                            <li>Integridad de datos</li>
-                            <li>Protección contra replay</li>
-                        </ul>
-                    </p>
-                    
-                    <p><strong>Ventajas:</strong>
-                        <ul>
-                            <li>Transparente para aplicaciones y usuarios</li>
-                            <li>Protección integral de la comunicación</li>
-                            <li>Ampliamente compatible con diferentes sistemas</li>
-                        </ul>
-                    </p>
-                    
-                    <p><strong>Limitaciones:</strong>
-                        <ul>
-                            <li>Complejidad de configuración</li>
-                            <li>Puede afectar el rendimiento de la red</li>
-                            <li>Requiere certificados o claves precompartidas</li>
-                        </ul>
-                    </p>
-                    
-                    <p><strong>Ejemplo de uso:</strong> IPSec se utiliza comúnmente en redes privadas virtuales (VPN) para conectar oficinas remotas de forma segura a través de Internet.</p>
-                </div>
-
-                <div class="protocol-card card">
-                    <div class="protocol-icon">💳</div>
-                    <h3>SET (Secure Electronic Transaction)</h3>
-                    <p><strong>Función principal:</strong> SET es un protocolo estándar para asegurar las transacciones con tarjetas de crédito a través de Internet. Fue desarrollado por Visa y MasterCard para proporcionar un método seguro para realizar compras en línea.</p>
-                    
-                    <p><strong>Capa del modelo OSI:</strong> Capa de aplicación (Capa 7)</p>
-                    
-                    <p><strong>Tipo de seguridad que ofrece:</strong> 
-                        <ul>
-                            <li>Confidencialidad de la información</li>
-                            <li>Autenticación de las partes</li>
-                            <li>Integridad de datos</li>
-                            <li>No repudio</li>
-                        </ul>
-                    </p>
-                    
-                    <p><strong>Ventajas:</strong>
-                        <ul>
-                            <li>Protección específica para transacciones financieras</li>
-                            <li>Autenticación mutua entre comprador y vendedor</li>
-                            <li>El comerciante no tiene acceso a los datos de la tarjeta</li>
-                        </ul>
-                    </p>
-                    
-                    <p><strong>Limitaciones:</strong>
-                        <ul>
-                            <li>Complejidad de implementación</li>
-                            <li>No fue ampliamente adoptado</li>
-                            <li>Reemplazado por otros protocolos como SSL/TLS</li>
-                        </ul>
-                    </p>
-                    
-                    <p><strong>Ejemplo de uso:</strong> Aunque SET no se utiliza ampliamente hoy en día, sentó las bases para los protocolos de pago seguros actuales y fue un precursor importante en la seguridad de las transacciones electrónicas.</p>
-                </div>
-            </div>
-            
+        <!-- EQUIPO 1 -->
+        <div id="team1" class="tab-content">
             <div class="card">
-                <h3>Demostración Práctica</h3>
-                <p>A continuación se presenta un video que muestra la implementación y funcionamiento de los protocolos IPSec y SET:</p>
-                
-                <div class="video-container">
-                    <!-- Aquí iría el video embebido sobre ambos protocolos -->
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-                </div>
-                <p><em>Nota: Este es un video de ejemplo. En el proyecto real, se incluirá el video creado por el equipo que cubra ambos protocolos.</em></p>
+                <h2>Equipo 1</h2>
+                <p>Contenido del equipo 1...</p>
+                <p>Aquí puedes agregar información sobre los protocolos que investigó el equipo 1.</p>
             </div>
         </div>
 
-        <div id="team" class="tab-content">
+        <!-- EQUIPO 2 -->
+        <div id="team2" class="tab-content">
+            <div class="card">
+                <h2>Equipo 2</h2>
+                <p>Contenido del equipo 2...</p>
+                <p>Aquí puedes agregar información sobre los protocolos que investigó el equipo 2.</p>
+            </div>
+        </div>
+
+        <!-- EQUIPO 3 - TU EQUIPO -->
+        <div id="team3" class="tab-content">
             <h2>Nuestro Equipo</h2>
             <p>Somos un equipo de 6 estudiantes trabajando en conjunto para investigar y presentar los protocolos IPSec y SET:</p>
             
@@ -625,19 +610,61 @@
                     <p>Rol: Coordinador de proyecto</p>
                 </div>
             </div>
-        </div>
 
-        <div id="references" class="tab-content">
-            <h2>Referencias y Recursos Adicionales</h2>
+            <h2>Protocolos de Seguridad</h2>
+            <p>Nuestro equipo está investigando los protocolos IPSec y SET:</p>
+            
+            <div class="protocol-section">
+                <div class="protocol-card card">
+                    <div class="protocol-icon">🔒</div>
+                    <h3>IPSec (Internet Protocol Security)</h3>
+                    <p><strong>Función principal:</strong> Conjunto de protocolos que proporciona seguridad a nivel de red para comunicaciones IP mediante autenticación y cifrado.</p>
+                    
+                    <p><strong>Capa del modelo OSI:</strong> Capa de red (Capa 3)</p>
+                    
+                    <p><strong>Tipo de seguridad:</strong> Cifrado, autenticación, integridad, protección contra replay.</p>
+                    
+                    <p><strong>Ventajas:</strong> Transparente para aplicaciones, protección integral, amplia compatibilidad.</p>
+                    
+                    <p><strong>Limitaciones:</strong> Complejidad de configuración, impacto en rendimiento, requiere certificados.</p>
+                    
+                    <p><strong>Ejemplo de uso:</strong> VPN para conectar oficinas remotas de forma segura.</p>
+                </div>
+
+                <div class="protocol-card card">
+                    <div class="protocol-icon">💳</div>
+                    <h3>SET (Secure Electronic Transaction)</h3>
+                    <p><strong>Función principal:</strong> Protocolo estándar para asegurar transacciones con tarjetas de crédito en Internet.</p>
+                    
+                    <p><strong>Capa del modelo OSI:</strong> Capa de aplicación (Capa 7)</p>
+                    
+                    <p><strong>Tipo de seguridad:</strong> Confidencialidad, autenticación, integridad, no repudio.</p>
+                    
+                    <p><strong>Ventajas:</strong> Protección específica para transacciones, autenticación mutua, comerciante no accede a datos de tarjeta.</p>
+                    
+                    <p><strong>Limitaciones:</strong> Complejidad de implementación, baja adopción, reemplazado por SSL/TLS.</p>
+                    
+                    <p><strong>Ejemplo de uso:</strong> Precursor de los protocolos de pago seguros actuales.</p>
+                </div>
+            </div>
+            
             <div class="card">
+                <h3>Demostración Práctica</h3>
+                <p>A continuación se presenta un video que muestra la implementación y funcionamiento de los protocolos IPSec y SET:</p>
+                
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                </div>
+                <p><em>Nota: Este es un video de ejemplo. En el proyecto real, se incluirá el video creado por el equipo que cubra ambos protocolos.</em></p>
+            </div>
+            
+            <div class="card">
+                <h2>Referencias y Recursos Adicionales</h2>
                 <h3>Fuentes de Investigación</h3>
                 <ul class="references">
                     <li>Stallings, W. (2017). Cryptography and Network Security: Principles and Practice. Pearson Education.</li>
                     <li>Tanenbaum, A. S., & Wetherall, D. J. (2011). Computer Networks. Pearson Education.</li>
                     <li>Forouzan, B. A. (2013). Data Communications and Networking. McGraw-Hill.</li>
-                    <li>RFC 4301 - Security Architecture for the Internet Protocol</li>
-                    <li>RFC 4303 - IP Encapsulating Security Payload (ESP)</li>
-                    <li>SET Secure Electronic Transaction Specification - Book 1: Business Description</li>
                 </ul>
                 
                 <h3>Herramientas Utilizadas</h3>
@@ -645,15 +672,34 @@
                     <li>Wireshark - Analizador de protocolos de red</li>
                     <li>VirtualBox - Virtualización para pruebas</li>
                     <li>FileZilla - Cliente FTP/SFTP</li>
-                    <li>OpenSSL - Implementación de protocolos SSL/TLS</li>
                 </ul>
-                
-                <h3>Enlaces de Interés</h3>
-                <ul class="references">
-                    <li><a href="https://www.ietf.org/rfc.html" target="_blank">IETF RFC Repository</a></li>
-                    <li><a href="https://www.cloudflare.com/learning/ssl/what-is-ssl/" target="_blank">Cloudflare - ¿Qué es SSL?</a></li>
-                    <li><a href="https://www.ssh.com/academy/ssh/protocol" target="_blank">SSH Academy - Protocolo SSH</a></li>
-                </ul>
+            </div>
+        </div>
+
+        <!-- EQUIPO 4 -->
+        <div id="team4" class="tab-content">
+            <div class="card">
+                <h2>Equipo 4</h2>
+                <p>Contenido del equipo 4...</p>
+                <p>Aquí puedes agregar información sobre los protocolos que investigó el equipo 4.</p>
+            </div>
+        </div>
+
+        <!-- EQUIPO 5 -->
+        <div id="team5" class="tab-content">
+            <div class="card">
+                <h2>Equipo 5</h2>
+                <p>Contenido del equipo 5...</p>
+                <p>Aquí puedes agregar información sobre los protocolos que investigó el equipo 5.</p>
+            </div>
+        </div>
+
+        <!-- EQUIPO 6 -->
+        <div id="team6" class="tab-content">
+            <div class="card">
+                <h2>Equipo 6</h2>
+                <p>Contenido del equipo 6...</p>
+                <p>Aquí puedes agregar información sobre los protocolos que investigó el equipo 6.</p>
             </div>
         </div>
     </div>
@@ -663,60 +709,7 @@
             <p>Proyecto de Seguridad Informática - Protocolos de Seguridad en la Red</p>
             <p>Cuatrimestre: IDS – 7A | Fecha de entrega: 14 de Noviembre de 2025</p>
             <p>Profesor: I.S.C Emmanuel de Atocha Perez Ojeda</p>
-        <!-- 🔹 Dragón animado estilo Kali Linux - ESQUINA SUPERIOR IZQUIERDA -->
-<div class="dragon-container top-left">
-    <img src="images/kali2.jpg" alt="Dragón Kali Linux" class="dragon-animado">
-</div>
-
-<style>
-.dragon-container.top-left {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 2000;
-}
-
-.dragon-animado {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    opacity: 0.9;
-    animation: giroDragon 8s infinite linear;
-    transform-origin: center;
-    box-shadow: 0 0 15px rgba(0, 150, 255, 0.5);
-    filter: brightness(1.1) contrast(1.1);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-}
-
-/* 🔄 Animación: gira continuamente como un disco de música */
-@keyframes giroDragon {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Efecto de brillo al pasar el mouse */
-.dragon-animado:hover {
-    animation-duration: 3s;
-    box-shadow: 0 0 25px rgba(0, 200, 255, 0.8);
-    filter: brightness(1.3) contrast(1.2);
-}
-
-/* Responsive para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .dragon-container.top-left {
-        top: 15px;
-        left: 15px;
-    }
-    
-    .dragon-animado {
-        width: 60px;
-        height: 60px;
-    }
-}
-</style>
-</style>
-
+        </div>
     </footer>
 
     <script>
@@ -738,7 +731,9 @@
                     
                     // Mostrar el contenido correspondiente
                     const tabId = this.getAttribute('data-tab');
-                    document.getElementById(tabId).classList.add('active');
+                    if (tabId) {
+                        document.getElementById(tabId).classList.add('active');
+                    }
                 });
             });
             
@@ -759,8 +754,8 @@
             
             // Simulación de carga de datos
             console.log("Página cargada correctamente");
-            console.log("Protocolos asignados: IPSec y SET");
-            console.log("Integrantes del equipo: 6");
+            console.log("Equipos participantes: 6");
+            console.log("Protocolos asignados: 11");
         });
     </script>
 </body>
