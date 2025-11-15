@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protocolos de Seguridad en la Red</title>
-    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo oscuro/claro">
-        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <svg class="moon-icon" viewBox="0 0 24 24">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
-        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <svg class="sun-icon" viewBox="0 0 24 24">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -24,9 +24,9 @@
         </svg>
     </button>
 
-
-    <div class="dragon-container top-left" aria-hidden="true">
-        <img src="images/kali2.jpg" alt="Dragón Kali Linux" class="dragon-animado" />
+    <!-- Dragón animado estilo Kali Linux - ESQUINA SUPERIOR IZQUIERDA -->
+    <div class="dragon-container top-left">
+        <img src="images/kali2.jpg" alt="Dragón Kali Linux" class="dragon-animado">
     </div>
 
     <header>
@@ -36,21 +36,20 @@
         </div>
     </header>
 
-    <main class="container">
-        <nav class="nav-tabs" role="tablist" aria-label="Navegación de secciones">
-            <div class="nav-tab active" data-tab="home" role="tab" aria-selected="true" tabindex="0">Inicio</div>
-            <div class="nav-tab" data-tab="team1" role="tab" tabindex="0">Equipo 1</div>
-            <div class="nav-tab" data-tab="team2" role="tab" tabindex="0">Equipo 2</div>
-            <div class="nav-tab" data-tab="team3" role="tab" tabindex="0">Equipo 3</div>
-            <div class="nav-tab" data-tab="team4" role="tab" tabindex="0">Equipo 4</div>
-            <div class="nav-tab" data-tab="team5" role="tab" tabindex="0">Equipo 5</div>
-        </nav>
+    <div class="container">
+        <div class="nav-tabs">
+            <div class="nav-tab active" data-tab="home">Inicio</div>
+            <div class="nav-tab" data-tab="team1">Equipo 1</div>
+            <div class="nav-tab" data-tab="team2">Equipo 2</div>
+            <div class="nav-tab" data-tab="team3">Equipo 3</div>
+            <div class="nav-tab" data-tab="team4">Equipo 4</div>
+            <div class="nav-tab" data-tab="team5">Equipo 5</div>
+        </div>
 
-        <!-- INICIO -->
-        <section id="home" class="tab-content active" role="tabpanel">
+        <div id="home" class="tab-content active">
             <div class="card">
                 <h2>Propósito del Proyecto</h2>
-                <p>Que los alumnos comprendan, analicen y apliquen los principales protocolos de seguridad en redes, identificando su función, estructura y utilidad en la protección de la información, mediante un trabajo colaborativo que integre investigación, simulación práctica y comunicación efectiva.</p>
+                <p>Que los alumnos comprendan, analicen y apliquen los principales protocolos de seguridad en redes, identificando su función, estructura, y utilidad en la protección de la información, mediante un trabajo colaborativo que integre investigación, simulación práctica y comunicación efectiva.</p>
             </div>
 
             <div class="card">
@@ -64,417 +63,573 @@
                     <li>Colaborar en la creación de un sitio web que centralice y difunda los resultados del grupo.</li>
                 </ul>
             </div>
-        </section>
+        </div>
 
         <!-- EQUIPO 1 -->
-        <section id="team1" class="tab-content" role="tabpanel" hidden>
+        <div id="team1" class="tab-content">
             <div class="card">
                 <h2>Equipo 1</h2>
                 <p>Contenido del equipo 1...</p>
                 <p>Aquí puedes agregar información sobre los protocolos que investigó el equipo 1.</p>
             </div>
-        </section>
-
-
-
-
+        </div>
 
         <!-- EQUIPO 2 -->
-        <section id="team2" class="tab-content" role="tabpanel" hidden>
+        <div id="team2" class="tab-content">
             <div class="card">
                 <h2>Equipo 2</h2>
-                <h3>Protocolos SSH y FTPS</h3>
+                <h2>Protocolos SSH y FTPS</h2>
                 <p>Nuestro equipo está investigando los protocolos SSH y FTPS:</p>
-
+                
                 <div class="protocol-section">
-                    <article class="protocol-card card">
-                        <div class="protocol-icon" aria-hidden="true">🔒</div>
-                        <h4>SSH (Secure Shell)</h4>
-                        <p><strong>Función principal:</strong> Proporcionar acceso remoto seguro a sistemas y permitir la administración protegida mediante cifrado, autenticación y túneles seguros. Diseñado como una alternativa segura a protocolos no cifrados como telnet y rlogin.</p>
+                    <div class="protocol-card card">
+                        <div class="protocol-icon">🔒</div>
+                        <h3>SSH (Secure Shell)</h3>
+                        <p><strong>Función principal</strong> 
+                            <p>Proporcionar acceso remoto seguro a sistemas y permitir la administración 
+                            protegida mediante cifrado, autenticación y túneles seguros. 
+                            Diseñado como una alternativa segura a los protocolos no cifrados como telnet y rlogin
+                            </p>
+                        </p>
+                        
+                        <p><strong>Capa del modelo OSI</strong> 
+                            <p>Se encuentra en la capa de aplicación del Modelo OSI (7).
+                            SSH está basado en el protocolo de transporte TCP y utiliza criptografía de clave pública/privada 
+                            para garantizar la privacidad de la información que se transfiere a través de la conexión.</p>
+                        </p>
+                        
+                        <p><strong>Tipo de seguridad</strong> 
+                            <p>Cifrado: SSH establece conexiones cifradas para proteger la información transmitida.</p> 
+                            <p>Autenticación: Utiliza métodos de autenticación seguros para verificar la identidad del usuario. </p>
+                            <p>Integridad de los datos: Asegura que los datos no se modifiquen durante la transmisión. </p>
+                            <p>Túnel: Permite que otros protocolos se transporten de forma segura a través de SSH.</p> 
+                        </p>
+                        
+                        <p><strong>Ventajas</strong> 
+                            <P>1. Después de la primera conexión, el cliente puede saber que se conectará al mismo servidor en futuras sesiones.</P> 
+                            <p>2. El cliente transmite al servidor el usuario y la contraseña en formato cifrado.</p> 
+                            <p>3. Todos los datos que se envían y reciben durante la conexión se transfieren cifrados.</p> 
+                            <p>4. El cliente puede ejecutar desde el terminal aplicaciones gráficas de forma segura.</p> 
+                        </p>
+                        
+                        <p><strong>Limitaciones:</strong> 
+                            <p>1. Menor compatibilidad con entornos antiguos: No todos los servidores FTP tradicionales soportan SFTP.</p> 
+                            <p>2. Configuración inicial técnica: Requiere generar y administrar claves SSH, lo que puede ser complejo para usuarios novatos.</p> 
+                            <p>3. Mayor consumo de CPU: El cifrado y descifrado en tiempo real puede demandar más recursos en sistemas de baja potencia.</p> 
+                            <p>4. No es lo mismo que FTPS: Aunque ambos son "seguros", no son compatibles entre sí (usan protocolos distintos).</p> 
+                        </p>
+                        
+                        <p><strong>Ejemplo de uso:</strong> </p>
+                    </div>
 
-                        <p><strong>Capa del modelo OSI:</strong> Aplicación (Capa 7). SSH usa TCP y criptografía de clave pública/privada para garantizar la privacidad.</p>
-
-                        <p><strong>Tipo de seguridad:</strong> Cifrado de la conexión, autenticación del usuario/host, integridad de datos y posibilidad de túneles seguros.</p>
-
-                        <p><strong>Ventajas:</strong></p>
-                        <ul>
-                            <li>Permite verificar el servidor tras la primera conexión.</li>
-                            <li>Credenciales transmitidas cifradas.</li>
-                            <li>Todo el tráfico durante la sesión está cifrado.</li>
-                            <li>Permite túneles y ejecución remota segura de aplicaciones gráficas.</li>
-                        </ul>
-
-                        <p><strong>Limitaciones:</strong></p>
-                        <ul>
-                            <li>Compatibilidad limitada con entornos FTP antiguos (SFTP/FTP distinto).</li>
-                            <li>Gestión de claves inicial puede ser compleja para novatos.</li>
-                            <li>Mayor uso de CPU por cifrado en sistemas de baja potencia.</li>
-                            <li>No es compatible directamente con FTPS (protocolos distintos).</li>
-                        </ul>
-
-                        <p><strong>Ejemplo de uso:</strong> Acceso administrativo remoto seguro a servidores.</p>
-                    </article>
-
-                    <article class="protocol-card card">
-                        <div class="protocol-icon" aria-hidden="true">📁</div>
-                        <h4>FTPS (File Transfer Protocol Secure)</h4>
-                        <p><strong>Función principal:</strong> Transferencia segura de archivos usando FTP sobre SSL/TLS para proteger credenciales y datos.</p>
-
-                        <p><strong>Capa del modelo OSI:</strong> Aplicación (Capa 7).</p>
-
-                        <p><strong>Tipo de seguridad:</strong> Cifrado de comandos y/o datos mediante SSL/TLS, autenticación con certificados.</p>
-
-                        <p><strong>Ventajas:</strong></p>
-                        <ul>
-                            <li>Uso de SSL/TLS para cifrar la conexión.</li>
-                            <li>Autenticación y cifrado de datos que protege la transferencia.</li>
-                            <li>Opciones configurables de puerto y cifrado.</li>
-                            <li>Ayuda a cumplir requisitos de privacidad y seguridad.</li>
-                        </ul>
-
-                        <p><strong>Limitaciones:</strong></p>
-                        <ul>
-                            <li>Configuración compleja (certificados y puertos).</li>
-                            <li>Problemas con firewalls/NAT por uso de múltiples puertos.</li>
-                            <li>Implementaciones distintas (implícito vs explícito) pueden causar incompatibilidades.</li>
-                            <li>Dependencia de certificados válidos.</li>
-                        </ul>
-
-                        <p><strong>Ejemplo de uso:</strong> Transferir archivos entre servidores con cifrado TLS en el transporte.</p>
-                    </article>
+                    <div class="protocol-card card">
+                        <div class="protocol-icon">📁</div>
+                        <h3>FTPS (File Transfer Protocol Secure)</h3>
+                        <p><strong>Función principal</strong> 
+                            <p>Permitir la transferencia segura de archivos mediante FTP, 
+                            añadiendo cifrado a través de SSL/TLS para proteger credenciales y datos.
+                            </p>
+                        
+                        <p><strong>Capa del modelo OSI</strong> 
+                            <p>Se encunetra en la Capa de Aplicación del Modelo OSI (7) 
+                            que permite la transferencia de archivos entre dispositivos en una red.
+                            </p>
+                        </p>
+                        
+                        <p><strong>Tipo de seguridad</strong> 
+                            <p>cifrando los datos y/o comandos transmitidos, lo que protege la información contra accesos 
+                            no autorizados y manipulaciones durante la transferencia.</p>
+                    </p>
+                        
+                        <p><strong>Ventajas</strong> 
+                            <p>1. Utiliza el protocolo SSL (Secure Sockets Layer) o TLS (Transport Layer Security) para establecer una conexión segura entre el cliente y el servidor.</p> 
+                            <p>2. Proporciona autenticación y cifrado de datos, lo que garantiza que los archivos transferidos estén protegidos contra accesos no autorizados.</p>
+                            <p>3. Ofrece opciones de configuración flexibles, como la elección del puerto de conexión y el tipo de cifrado utilizado.</p> 
+                            <p>4. Al utilizar FTPS, los usuarios pueden tener la tranquilidad de que sus datos están protegidos durante la transferencia, lo que ayuda a cumplir con los requisitos de seguridad y privacidad. </p>
+                        </p>
+                        
+                        <p><strong>Limitaciones</strong>
+                            <p>1. Configuración más compleja: Requiere certificados SSL/TLS y configuración de puertos adicionales.</p> 
+                            <p>2. Problemas con firewalls: Usa múltiples puertos (control y datos), lo que complica su uso detrás de NAT o firewalls estrictos.</p> 
+                            <p>3. Menor estandarización: Algunos clientes/servidores implementan FTPS de forma diferente (implícito o explícito), lo que puede causar incompatibilidades.</p> 
+                            <p>4. Dependencia de certificados: Si el certificado expira o no está bien configurado, la conexión falla. </p>
+                        </p>
+                        
+                        <p><strong>Ejemplo de uso:</strong> </p>
+                    </div>
                 </div>
-
+                
                 <div class="card">
                     <h3>Demostración Práctica</h3>
-                    <p>Video que muestra la implementación y funcionamiento de SSH y FTPS:</p>
+                    <p>A continuación se presenta un video que muestra la implementación y funcionamiento de los protocolos SSH y FTPS:</p>
+                    
                     <div class="video-container">
-                        <iframe src="https://youtu.be/ZjB_O-OBq9o?si=RheSr81-VWzklkdz" allowfullscreen title="Demostración SSH y FTPS"></iframe>
+                        <iframe width="813" height="466" 
+                            src="https://www.youtube.com/embed/ZjB_O-OBq9o"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
                     </div>
                     <p><em>Video demostrativo del uso de los protocolos SSH y FTPS</em></p>
                 </div>
-
+                
                 <div class="card">
-                    <h3>Referencias y Miembros de Equipo</h3>
-                    <h4>Fuentes de Investigación</h4>
-                    <ul class="references">
-                        <li>ALEGSA. Definición de FTPS.</li>
-                        <li>Hostinger. ¿Cómo funciona el SSH? (2025).</li>
-                        <li>rsadmin101. Qué protocolo utiliza SSH.</li>
-                        <li>Gerardo. Sensacionweb: FTPS.</li>
-                        <li>apuntesycursos. Conexiones seguras con SSH.</li>
-                    </ul>
-
-                    <h4>Equipo</h4>
-                    <div class="team-members">
-                        <div class="member card"><h5>Canche Chi Luis Eduardo</h5><p>Matrícula: 2321298</p></div>
-                        <div class="member card"><h5>Chan Chim José Isac</h5><p>Matrícula: 23212904</p></div>
-                        <div class="member card"><h5>Moreno Ek Melquiel de Jesus</h5><p>Matrícula: 23212927</p></div>
-                        <div class="member card"><h5>Trujeque Euan Gael Jesus</h5><p>Matrícula: 23212939</p></div>
-                        <div class="member card"><h5>Uitz Uitz Diego Josué</h5><p>Matrícula: 23212936</p></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-
-        <!-- EQUIPO 3 -->
-        <section id="team3" class="tab-content" role="tabpanel" hidden>
-            <div class="card">
-                <h2>Nuestro Equipo</h2>
-                <p>Somos un equipo de 6 estudiantes trabajando en conjunto para investigar y presentar los protocolos IPSec y SET:</p>
-
-                <div class="team-members">
-                    <div class="member card">
-                        <img src="images/kevin.jpeg" alt="Foto del integrante 1" class="member-photo">
-                        <h4>Kevin Abel Mena Dominguez</h4>
-                        <p>Rol: Investigador principal</p>
-                    </div>
-                    <div class="member card">
-                        <img src="images/jesus.jpeg" alt="Foto del integrante 2" class="member-photo">
-                        <h4>Jesus Antonio Canche Canche</h4>
-                        <p>Rol: Especialista en simulación</p>
-                    </div>
-                    <div class="member card">
-                        <img src="images/Gerardo.jpeg" alt="Foto del integrante 3" class="member-photo">
-                        <h4>Gerardo Manuel Eb Santos</h4>
-                        <p>Rol: Desarrollador de contenido</p>
-                    </div>
-                    <div class="member card">
-                        <img src="images/deysi.jpeg" alt="Foto del integrante 4" class="member-photo">
-                        <h4>Deysi Yasme Balam Oy</h4>
-                        <p>Rol: Editor de video</p>
-                    </div>
-                    <div class="member card">
-                        <img src="images/Joma.jpeg" alt="Foto del integrante 5" class="member-photo">
-                        <h4>Jose Martin Kuh Medina</h4>
-                        <p>Rol: Diseñador web</p>
-                    </div>
-                    <div class="member card">
-                        <img src="images/jediael.jpeg" alt="Foto del integrante 6" class="member-photo">
-                        <h4>Jediael Abinadab Carrillo Vazquez</h4>
-                        <p>Rol: Coordinador de proyecto</p>
-                    </div>
-                </div>
-
-                <h2>Protocolos de Seguridad</h2>
-                <p>Nuestro equipo está investigando los protocolos IPSec y SET:</p>
-
-                <div class="protocol-section">
-                    <article class="protocol-card card">
-                        <div class="protocol-icon" aria-hidden="true">🔒</div>
-                        <h3>IPSec (Internet Protocol Security)</h3>
-                        <p><strong>Función principal:</strong> Conjunto de protocolos que proporciona seguridad a nivel de red para comunicaciones IP mediante autenticación y cifrado.</p>
-                        <p><strong>Capa del modelo OSI:</strong> Capa de red (Capa 3).</p>
-                        <p><strong>Tipo de seguridad:</strong> Cifrado, autenticación, integridad y protección contra replay.</p>
-                        <p><strong>Ventajas:</strong> Transparente para aplicaciones, protección integral y amplia compatibilidad.</p>
-                        <p><strong>Limitaciones:</strong> Complejidad de configuración y posible impacto en rendimiento.</p>
-                        <p><strong>Ejemplo de uso:</strong> VPN para conectar oficinas remotas de forma segura.</p>
-                    </article>
-
-                    <article class="protocol-card card">
-                        <div class="protocol-icon" aria-hidden="true">💳</div>
-                        <h3>SET (Secure Electronic Transaction)</h3>
-                        <p><strong>Función principal:</strong> Protocolo para asegurar transacciones con tarjetas de crédito en Internet.</p>
-                        <p><strong>Capa del modelo OSI:</strong> Aplicación (Capa 7).</p>
-                        <p><strong>Tipo de seguridad:</strong> Confidencialidad, autenticación, integridad y no repudio.</p>
-                        <p><strong>Ventajas:</strong> Protección específica para transacciones y autenticación mutua.</p>
-                        <p><strong>Limitaciones:</strong> Complejidad de implementación y baja adopción; fue reemplazado en gran parte por SSL/TLS.</p>
-                        <p><strong>Ejemplo de uso:</strong> Precursor de métodos de pago seguros actuales.</p>
-                    </article>
-                </div>
-
-                <div class="card">
-                    <h3>Demostración Práctica</h3>
-                    <p>Video que muestra la implementación y funcionamiento de IPSec y SET:</p>
-                    <div class="video-container">
-                        <iframe width="813" height="466" src="https://www.youtube.com/embed/R-1wIxOWaE4?si=pjGib91az3kKCEP4" title="IPSec y SET" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h2>Referencias y Recursos Adicionales</h2>
+                    <h2>Referencias y Miembros de Equipo</h2>
                     <h3>Fuentes de Investigación</h3>
                     <ul class="references">
-                        <li>Stallings, W. (2017). Cryptography and Network Security: Principles and Practice.</li>
-                        <li>Tanenbaum, A. S., & Wetherall, D. J. (2011). Computer Networks.</li>
-                        <li>Forouzan, B. A. (2013). Data Communications and Networking.</li>
+                     <li>Alegsa, L. (sf). ALEGSA.com.ar: Definición de FTPS (FTP Secure, FTP/SSL).</li>
+                     <li>Deyimar, A.(2025). hostinger: ¿Cómo funciona el SSH?.</li>   
+                     <li>rsadmin101(sf). Qué protocolo utiliza SSH.</li> 
+                     <li>Gerardo(sf).sensacionweb: FTPS (FTP Seguro): Qué es, características y beneficios Título SEO corto: FTPS: seguridad y eficiencia en la transferencia de archivos.</li> 
+                     <li>apuntesycursos(sf). Conexiones Seguras con SSH: Características, Ventajas y Funcionamiento.</li> 
                     </ul>
-
-                    <h3>Herramientas Utilizadas</h3>
-                    <ul class="references">
-                        <li>Wireshark - Analizador de protocolos de red</li>
-                        <li>VirtualBox - Virtualización para pruebas</li>
-                    </ul>
+                <h3>Equipo</h3>    
+                <div class="team-members">
+                    <div class="member card">
+                        <h4>Canche Chi Luis Eduardo</h4>
+                        <p>Matricula: 2321298</p>
+                    </div>
+                    <div class="member card">
+                        <h4>Chan Chim José Isac</h4>
+                        <p>Matricula: 23212904</p>
+                    </div>
+                    <div class="member card">
+                        <h4>Moreno Ek Melquiel de Jesus</h4>
+                        <p>Matricula: 23212927</p>
+                    </div>
+                    <div class="member card">
+                        <h4>Trujeque Euan Gael Jesus</h4>
+                        <p>Matricula: 23212939</p>
+                    </div>
+                    <div class="member card">
+                        <h4>Uitz Uitz Diego Josué</h4>
+                        <p>Matricula: 23212936</p>
+                    </div>
+                </div>  
                 </div>
             </div>
-        </section>
+        </div>
 
+        <!-- EQUIPO 3 -->
+        <div id="team3" class="tab-content">
+            <h2>Nuestro Equipo</h2>
+            <p>Somos un equipo de 6 estudiantes trabajando en conjunto para investigar y presentar los protocolos IPSec y SET:</p>
+            
+            <div class="team-members">
+                <div class="member card">
+                    <img src="images/kevin.jpeg" alt="Foto del integrante 1" class="member-photo">
+                    <h4>Kevin Abel Mena Dominguez</h4>
+                    <p>Rol: Investigador principal</p>
+                </div>
+                <div class="member card">
+                    <img src="images/jesus.jpeg" alt="Foto del integrante 2" class="member-photo">
+                    <h4>Jesus Antonio Canche Canche</h4>
+                    <p>Rol: Especialista en simulación</p>
+                </div>
+                <div class="member card">
+                    <img src="images/Gerardo.jpeg" alt="Foto del integrante 3" class="member-photo">
+                    <h4>Gerardo Manuel Eb Santos</h4>
+                    <p>Rol: Desarrollador de contenido</p>
+                </div>
+                <div class="member card">
+                    <img src="images/deysi.jpeg" alt="Foto del integrante 4" class="member-photo">
+                    <h4>Deysi Yasme Balam Oy</h4>
+                    <p>Rol: Editor de video</p>
+                </div>
+                <div class="member card">
+                    <img src="images/Joma.jpeg" alt="Foto del integrante 5" class="member-photo">
+                    <h4>Jose Martin Kuh Medina</h4>
+                    <p>Rol: Diseñador web</p>
+                </div>
+                <div class="member card">
+                    <img src="images/jediael.jpeg" alt="Foto del integrante 3" class="member-photo">
+                    <h4>Jediael Abinadab Carrillo Vazquez</h4>
+                    <p>Rol: Coordinador de proyecto</p>
+                </div>
+            </div>
 
+            <h2>Protocolos de Seguridad</h2>
+            <p>Nuestro equipo está investigando los protocolos IPSec y SET:</p>
+            
+            <div class="protocol-section">
+                <div class="protocol-card card">
+                    <div class="protocol-icon">🔒</div>
+                    <h3>IPSec (Internet Protocol Security)</h3>
+                    <p><strong>Función principal:</strong> Conjunto de protocolos que proporciona seguridad a nivel de red para comunicaciones IP mediante autenticación y cifrado.</p>
+                    
+                    <p><strong>Capa del modelo OSI:</strong> Capa de red (Capa 3)</p>
+                    
+                    <p><strong>Tipo de seguridad:</strong> Cifrado, autenticación, integridad, protección contra replay.</p>
+                    
+                    <p><strong>Ventajas:</strong> Transparente para aplicaciones, protección integral, amplia compatibilidad.</p>
+                    
+                    <p><strong>Limitaciones:</strong> Complejidad de configuración, impacto en rendimiento, requiere certificados.</p>
+                    
+                    <p><strong>Ejemplo de uso:</strong> VPN para conectar oficinas remotas de forma segura.</p>
+                </div>
 
+                <div class="protocol-card card">
+                    <div class="protocol-icon">💳</div>
+                    <h3>SET (Secure Electronic Transaction)</h3>
+                    <p><strong>Función principal:</strong> Protocolo estándar para asegurar transacciones con tarjetas de crédito en Internet.</p>
+                    
+                    <p><strong>Capa del modelo OSI:</strong> Capa de aplicación (Capa 7)</p>
+                    
+                    <p><strong>Tipo de seguridad:</strong> Confidencialidad, autenticación, integridad, no repudio.</p>
+                    
+                    <p><strong>Ventajas:</strong> Protección específica para transacciones, autenticación mutua, comerciante no accede a datos de tarjeta.</p>
+                    
+                    <p><strong>Limitaciones:</strong> Complejidad de implementación, baja adopción, reemplazado por SSL/TLS.</p>
+                    
+                    <p><strong>Ejemplo de uso:</strong> Precursor de los protocolos de pago seguros actuales.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Demostración Práctica</h3>
+                <p>A continuación se presenta un video que muestra la implementación y funcionamiento de los protocolos IPSec y SET:</p>
+                
+                <div class="video-container">
+                    <iframe width="813" height="466" 
+                        src="https://www.youtube.com/embed/R-1wIxOWaE4"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+        
+                <!-- CONTENEDOR FLEX PARA ALINEAR TEXTO Y BOTÓN -->
+                <div class="video-footer">
+                    <p><em>Si el video no aparece, puede dar clic al siguiente boton: </em></p>
 
+                    <a href="https://www.youtube.com/watch?v=R-1wIxOWaE4" 
+                    target="_blank" 
+                    class="btn-video">
+                    Ver en YouTube
+                    </a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Referencias y Recursos Adicionales</h2>
+                <h3>Fuentes de Investigación</h3>
+                <ul class="references">
+                    <li>Stallings, W. (2017). Cryptography and Network Security: Principles and Practice. Pearson Education.</li>
+                    <li>Tanenbaum, A. S., & Wetherall, D. J. (2011). Computer Networks. Pearson Education.</li>
+                    <li>Forouzan, B. A. (2013). Data Communications and Networking. McGraw-Hill.</li>
+                </ul>
+                
+                <h3>Herramientas Utilizadas</h3>
+                <ul class="references">
+                    <li>Wireshark - Analizador de protocolos de red</li>
+                    <li>VirtualBox - Virtualización para pruebas</li>
+                </ul>
+            </div>
+        </div>
 
         <!-- EQUIPO 4 -->
-        <section id="team4" class="tab-content" role="tabpanel" hidden>
-            <div class="card">
-                <h2>Nuestro Equipo</h2>
-                <p>Somos el Equipo 4, un grupo de estudiantes dedicados a investigar y presentar los protocolos SCP y SFTP:</p>
+        <div id="team4" class="tab-content">
+            <h2>Nuestro Equipo</h2>
+            <p>Somos el Equipo 4, un grupo de estudiantes dedicados a investigar y presentar los protocolos SCP y SFTP:</p>
+            
+            <div class="team-members">
+                <div class="member card">
+                    <img src="images_E4/manu.jpeg" alt="Foto del integrante 1" class="member-photo">
+                    <h4>Eleazar Manuel Chi Tzec</h4>
+                    <p></p>
+                </div>
+                <div class="member card">
+                    <img src="images_E4/jessi.jpg" alt="Foto del integrante 2" class="member-photo">
+                    <h4>Jessica Gabriela Poot Chan</h4>
+                    <p></p>
+                </div>
+                <div class="member card">
+                    <img src="images_E4/moises.jpg" alt="Foto del integrante 3" class="member-photo">
+                    <h4>Moises Israel Canche Valencia</h4>
+                    <p></p>
+                </div>
+                <div class="member card">
+                    <img src="images_E4/heidi.jpg" alt="Foto del integrante 4" class="member-photo">
+                    <h4>Heidy Dianely May Cabrera</h4>
+                    <p></p>
+                </div>
+                <div class="member card">
+                    <img src="images_E4/david.jpg" alt="Foto del integrante 5" class="member-photo">
+                    <h4>Jesus David Hernandez Herrera</h4>
+                    <p></p>
+                </div>
+                <div class="member card">
+                    <img src="images_E4/rach.jpg" alt="Foto del integrante 6" class="member-photo">
+                    <h4>Santiago Rafael Sanchez Cime</h4>
+                    <p></p>
+                </div>
+            </div>
 
-                <div class="team-members">
-                    <div class="member card">
-                        <img src="images_E4/manu.jpeg" alt="Foto del integrante 1" class="member-photo">
-                        <h4>Eleazar Manuel Chi Tzec</h4>
-                    </div>
-                    <div class="member card">
-                        <img src="images_E4/jessi.jpg" alt="Foto del integrante 2" class="member-photo">
-                        <h4>Jessica Gabriela Poot Chan</h4>
-                    </div>
-                    <div class="member card">
-                        <img src="images_E4/moises.jpg" alt="Foto del integrante 3" class="member-photo">
-                        <h4>Moises Israel Canche Valencia</h4>
-                    </div>
-                    <div class="member card">
-                        <img src="images_E4/heidi.jpg" alt="Foto del integrante 4" class="member-photo">
-                        <h4>Heidy Dianely May Cabrera</h4>
-                    </div>
-                    <div class="member card">
-                        <img src="images_E4/david.jpg" alt="Foto del integrante 5" class="member-photo">
-                        <h4>Jesus David Hernandez Herrera</h4>
-                    </div>
-                    <div class="member card">
-                        <img src="images_E4/rach.jpg" alt="Foto del integrante 6" class="member-photo">
-                        <h4>Santiago Rafael Sanchez Cime</h4>
-                    </div>
+            <h2>Protocolos de Seguridad</h2>
+            <p>Nuestro equipo está investigando los protocolos SCP (Secure Copy Protocol) y SFTP (SSH File Transfer Protocol):</p>
+            
+            <div class="protocol-section">
+                <div class="protocol-card card">
+                    <div class="protocol-icon">📁</div>
+                    <h3>SCP (Secure Copy Protocol)</h3>
+                    <p><strong>Función principal:</strong> Protocolo que permite la transferencia segura de archivos entre un host local y un host remoto, o entre dos hosts remotos.</p>
+                    
+                    <p><strong>Capa del modelo OSI:</strong> Capa de aplicación (Capa 7)</p>
+                    
+                    <p><strong>Tipo de seguridad:</strong> Cifrado, autenticación, integridad.</p>
+                    
+                    <p><strong>Ventajas:</strong> Simple de usar, utiliza SSH para seguridad, ampliamente compatible, transferencia eficiente.</p>
+                    
+                    <p><strong>Limitaciones:</strong> No permite navegación de directorios, sin funciones de gestión de archivos, no puede reanudar transferencias interrumpidas.</p>
+                    
+                    <p><strong>Ejemplo de uso:</strong> Transferir archivos de configuración de forma segura a servidores remotos.</p>
+                    
+                    <h4>Comando básico:</h4>
+                    <code>scp archivo.txt usuario@servidor:/ruta/destino/</code>
                 </div>
 
-                <h2>Protocolos de Seguridad</h2>
-                <p>Nuestro equipo está investigando los protocolos SCP (Secure Copy Protocol) y SFTP (SSH File Transfer Protocol):</p>
-
-                <div class="protocol-section">
-                    <article class="protocol-card card">
-                        <div class="protocol-icon" aria-hidden="true">📁</div>
-                        <h3>SCP (Secure Copy Protocol)</h3>
-                        <p><strong>Función principal:</strong> Transferir archivos de forma segura entre hosts usando SSH.</p>
-                        <p><strong>Capa OSI:</strong> Aplicación (Capa 7).</p>
-                        <p><strong>Ventajas:</strong> Simple y eficiente para transferencias sencillas.</p>
-                        <p><strong>Limitaciones:</strong> No permite navegación interactiva ni reanudar transferencias.</p>
-                        <p><strong>Comando básico:</strong> <code>scp archivo.txt usuario@servidor:/ruta/destino/</code></p>
-                    </article>
-
-                    <article class="protocol-card card">
-                        <div class="protocol-icon" aria-hidden="true">🔐</div>
-                        <h3>SFTP (SSH File Transfer Protocol)</h3>
-                        <p><strong>Función principal:</strong> Proporcionar transferencia y gestión de archivos sobre una conexión SSH segura.</p>
-                        <p><strong>Capa OSI:</strong> Aplicación (Capa 7).</p>
-                        <p><strong>Ventajas:</strong> Navegación de directorios, reanudación de transferencias, gestión de permisos.</p>
-                        <p><strong>Limitaciones:</strong> Mayor sobrecarga y complejidad comparado con SCP.</p>
-                    </article>
-                </div>
-
-                <div class="card">
-                    <h3>Comparación entre SCP y SFTP</h3>
-                    <div class="protocol-section">
-                        <div class="protocol-card card">
-                            <h4>SCP</h4>
-                            <ul>
-                                <li>Más rápido para transferencias simples.</li>
-                                <li>Menos funcionalidades.</li>
-                                <li>Ideal para scripts automatizados.</li>
-                            </ul>
-                        </div>
-                        <div class="protocol-card card">
-                            <h4>SFTP</h4>
-                            <ul>
-                                <li>Más funciones de gestión de archivos.</li>
-                                <li>Interfaz interactiva y posibilidad de reanudar transferencias.</li>
-                                <li>Mejor para uso interactivo y administración remota.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>Demostración Práctica</h3>
-                    <div class="videos-container">
-                        <div class="video-pair">
-                            <div class="video-item">
-                                <h4>Protocolo SCP</h4>
-                                <div class="video-container">
-                                    <iframe src="https://youtu.be/zZ7cep2uZVk?si=e3S6SJ5Xw7_zLkFN" allowfullscreen title="SCP"></iframe>
-                                </div>
-                            </div>
-                            <div class="video-item">
-                                <h4>Protocolo SFTP</h4>
-                                <div class="video-container">
-                                    <iframe src="https://youtu.be/TVqvnfYaQp4?si=hH3DKbohgOf6U4bV" allowfullscreen title="SFTP"></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Referencias y Herramientas</h3>
-                    <ul class="references">
-                        <li>Barrett, D. J. (2016). SSH, The Secure Shell: The Definitive Guide.</li>
-                        <li>Ylonen, T., & Lonvick, C. (2006). RFC 4251 - The Secure Shell (SSH) Protocol Architecture.</li>
-                        <li>OpenSSH Project (2023). Documentación de OpenSSH.</li>
+                <div class="protocol-card card">
+                    <div class="protocol-icon">🔐</div>
+                    <h3>SFTP (SSH File Transfer Protocol)</h3>
+                    <p><strong>Función principal:</strong> Protocolo de transferencia de archivos que proporciona acceso, transferencia y gestión de archivos sobre un flujo de datos confiable.</p>
+                    
+                    <p><strong>Capa del modelo OSI:</strong> Capa de aplicación (Capa 7)</p>
+                    
+                    <p><strong>Tipo de seguridad:</strong> Cifrado, autenticación, integridad, confidencialidad.</p>
+                    
+                    <p><strong>Ventajas:</strong> Interfaz interactiva, navegación de directorios, gestión de permisos, reanudación de transferencias.</p>
+                    
+                    <p><strong>Limitaciones:</strong> Mayor sobrecarga que SCP, más complejo de implementar.</p>
+                    
+                    <p><strong>Ejemplo de uso:</strong> Gestión remota de archivos en servidores web mediante clientes como FileZilla.</p>
+                    
+                    <h4>Características destacadas:</h4>
+                    <ul>
+                        <li>Operaciones atómicas</li>
+                        <li>Bloqueo de archivos</li>
+                        <li>Atributos extendidos de archivos</li>
                     </ul>
                 </div>
             </div>
-        </section>
+            
+            <div class="card">
+                <h3>Comparación entre SCP y SFTP</h3>
+                <p>Aunque ambos protocolos utilizan SSH para proporcionar seguridad, existen diferencias importantes:</p>
+                
+                <div class="protocol-section">
+                    <div class="protocol-card card">
+                        <h4>SCP</h4>
+                        <ul>
+                            <li>Más rápido para transferencias simples</li>
+                            <li>Menos funcionalidades</li>
+                            <li>No permite navegación interactiva</li>
+                            <li>Mejor para scripts automatizados</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="protocol-card card">
+                        <h4>SFTP</h4>
+                        <ul>
+                            <li>Más funciones de gestión de archivos</li>
+                            <li>Interfaz interactiva</li>
+                            <li>Permite reanudar transferencias</li>
+                            <li>Mejor para uso interactivo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Demostración Práctica</h3>
+                <p>A continuación se presentan videos que muestran la implementación y uso de los protocolos SCP y SFTP:</p>
+                
+                <div class="videos-container">
+                    <div class="video-pair">
+                        <div class="video-item">
+                            <h4>Protocolo SCP</h4>
+                            <div class="video-container">
+                                <iframe width="813" height="466" 
+                                    src="https://www.youtube.com/embed/zZ7cep2uZVk"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                        <div class="video-item">
+                            <h4>Protocolo SFTP</h4>
+                            <div class="video-container">
+                                <iframe width="813" height="466" 
+                                    src="https://www.youtube.com/embed/TVqvnfYaQp4"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p><em>VIDEO_SCP y VIDEO_SFTP</em></p>
+            </div>
+            
+            <div class="card">
+                <h2>Referencias y Recursos Adicionales</h2>
+                <h3>Fuentes de Investigación</h3>
+                <ul class="references">
+                    <li>Barrett, D. J. (2016). SSH, The Secure Shell: The Definitive Guide. O'Reilly Media.</li>
+                    <li>Ylonen, T., & Lonvick, C. (2006). The Secure Shell (SSH) Protocol Architecture. RFC 4251.</li>
+                    <li>OpenSSH Project. (2023). OpenSSH Documentation. https://www.openssh.com/</li>
+                </ul>
+                
+                <h3>Herramientas Utilizadas</h3>
+                <ul class="references">
+                    <li>OpenSSH - Implementación de SSH, SCP y SFTP</li>
+                    <li>FileZilla - Cliente SFTP gráfico</li>
+                    <li>Wireshark - Análisis de tráfico de red</li>
+                    <li>Linux/Unix - Entorno de pruebas para comandos</li>
+                </ul>
+                
+                <h3>Comandos útiles</h3>
+                <ul class="references">
+                    <li><code>scp archivo usuario@host:/ruta/</code> - Copiar archivo mediante SCP</li>
+                    <li><code>sftp usuario@host</code> - Conectar mediante SFTP</li>
+                    <li><code>put archivo</code> - Subir archivo en SFTP</li>
+                    <li><code>get archivo</code> - Descargar archivo en SFTP</li>
+                </ul>
+            </div>
+        </div>
 
-
-
-
-
-        
         <!-- EQUIPO 5 -->
-        <section id="team5" class="tab-content" role="tabpanel" hidden>
-            <div class="card">
-                <h2>Nuestro Equipo</h2>
-                <p>Nuestro equipo fue designado para describir los protocolos SMTPS, IMAPS y OAuth</p>
-
-                <div class="team-members">
-                    <div class="member card">
-                        <img src="images/equipo5/boomer.jpeg" alt="Foto integrante 1" class="member-photo">
-                        <h4>Oscar Leonel Carrillo Dzul</h4>
-                    </div>
-                    <div class="member card">
-                        <img src="images/equipo5/cheve.jpeg" alt="Foto integrante 2" class="member-photo">
-                        <h4>Luis Vicente Echeverria Perez</h4>
-                    </div>
-                    <div class="member card">
-                        <img src="images/equipo5/marvic.jpeg" alt="Foto integrante 3" class="member-photo">
-                        <h4>Marvic Adriel May Salazar</h4>
-                    </div>
-                    <div class="member card">
-                        <img src="images/equipo5/pablo.jpg" alt="Foto integrante 4" class="member-photo">
-                        <h4>Pablo David Uitz Uitz</h4>
-                    </div>
-                    <div class="member card">
-                        <img src="images/equipo5/pulpazo.jpeg" alt="Foto integrante 5" class="member-photo">
-                        <h4>Angel Erubiel Carrillo Vazquez</h4>
-                    </div>
+        <div id="team5" class="tab-content">
+            <h2>Nuestro Equipo</h2>
+            <p>Nuestro equipo fue designado para describir los protocolos SMTPS, IMAPS  y OAuth</p>
+            
+            <div class="team-members">
+                <div class="member card">
+                    <img src="images/equipo5/boomer.jpeg" alt="Foto del integrante 1" class="member-photo">
+                    <h4>Oscar Leonel Carrillo Dzul</h4>
                 </div>
-
-                <h2>Protocolos de Seguridad</h2>
-                <div class="protocol-section">
-                    <article class="protocol-card card">
-                        <h3>✉️ SMTPS (Simple Mail Transfer Protocol Secure)</h3>
-                        <p><strong>Función principal:</strong> Envío de correo seguro mediante SMTP sobre TLS/SSL para cifrar la comunicación entre cliente y servidor.</p>
-                        <p><strong>Capa OSI:</strong> Aplicación (Capa 7).</p>
-                        <p><strong>Tipo de seguridad:</strong> TLS/SSL, autenticación del servidor y protección contra MITM.</p>
-                        <p><strong>Ejemplo de uso:</strong> Envío seguro desde aplicaciones web usando puerto 465 o 587 con STARTTLS/TLS.</p>
-                    </article>
-
-                    <article class="protocol-card card">
-                        <h3>📩 IMAPS (Internet Message Access Protocol Secure)</h3>
-                        <p><strong>Función principal:</strong> Acceso y gestión de correos almacenados en servidor mediante IMAP sobre TLS/SSL.</p>
-                        <p><strong>Capa OSI:</strong> Aplicación (Capa 7).</p>
-                        <p><strong>Ejemplo de uso:</strong> Acceso seguro a buzones con puertos como 993.</p>
-                    </article>
-
-                    <article class="protocol-card card">
-                        <h3>🔑 OAuth (Open Authorization)</h3>
-                        <p><strong>Función principal:</strong> Mecanismo para que aplicaciones obtengan acceso limitado a recursos de un usuario sin compartir su contraseña.</p>
-                        <p><strong>Capa OSI:</strong> Aplicación (Capa 7).</p>
-                        <p><strong>Tipo de seguridad:</strong> Tokens de acceso, autorización delegada y uso sobre HTTPS.</p>
-                        <p><strong>Ejemplo de uso:</strong> Inicio de sesión con Google o Facebook mediante intercambio de tokens.</p>
-                    </article>
+                <div class="member card">
+                    <img src="images/equipo5/cheve.jpeg" alt="Foto del integrante 2" class="member-photo">
+                    <h4>Luis Vicente Echeverria Perez</h4>
                 </div>
-
-                <div class="card">
-                    <h3>Demostración Práctica</h3>
-                    <p>Video explicativo y simulación:</p>
-                    <div class="video-container">
-                        <iframe width="813" height="466" src="https://www.youtube.com/embed/ltJ_WU2lc3c" title="EQUIPO 5 PROTOCOLO DE SEGURIDAD" frameborder="0" allowfullscreen></iframe>
-                    </div>
-
-                    <div class="video-footer">
-                        <p><em>Si el video no aparece, puede dar clic al siguiente botón:</em></p>
-                        <a href="https://www.youtube.com/watch?v=ltJ_WU2lc3c" target="_blank" class="btn-video" rel="noopener noreferrer">Ver en YouTube</a>
-                    </div>
+                <div class="member card">
+                    <img src="images/equipo5/marvic.jpeg" alt="Foto del integrante 3" class="member-photo">
+                    <h4>Marvic Adriel May Salazar</h4>
                 </div>
-
-                <div class="card">
-                    <h3>Referencias y Recursos Adicionales</h3>
-                    <ul class="references">
-                        <li>López, P. (2021). ¿Qué es SMTP y para qué sirve? GEEKNETIC.</li>
-                        <li>Jiménez, J. (2024). Protocolo IMAP de email: ¿Qué es y cómo configurarlo? RedesZone.</li>
-                        <li>Auth0 Docs. Introducción a IAM.</li>
-                    </ul>
-
-                    <h4>Herramientas Utilizadas</h4>
-                    <ul class="references">
-                        <li>Google Cloud - Obtención de tokens OAuth 2.0</li>
-                        <li>MailHog — Servidor de correo de pruebas</li>
-                        <li>Thunderbird — Cliente de prueba</li>
-                    </ul>
+                <div class="member card">
+                    <img src="images/equipo5/pablo.jpg" alt="Foto del integrante 4" class="member-photo">
+                    <h4>Pablo David Uitz Uitz</h4>
+                </div>
+                <div class="member card">
+                    <img src="images/equipo5/pulpazo.jpeg" alt="Foto del integrante 5" class="member-photo">
+                    <h4>Angel Erubiel Carrillo Vazquez</h4>
                 </div>
             </div>
-        </section>
-    </main>
+
+            <h2>Protocolos de Seguridad</h2>
+            
+            <div class="protocol-section">
+                <div class="protocol-card card">
+                    <h3>✉️ SMTPS (Simple Mail Transfer Protocol Secure)</h3>
+                    <p><strong>Función principal:</strong> Proporcionar un envío de correo electrónico seguro mediante el uso de SMTP sobre TLS/SSL, garantizando que la comunicación entre el cliente y el servidor esté cifrada.</p>
+                    
+                    <p><strong>Capa del modelo OSI:</strong> Capa de aplicación (Capa 7)</p>
+                    
+                    <p><strong>Tipo de seguridad:</strong> Cifrado TLS/SSL, autenticación del servidor, protección contra interceptación (Men In The Middle [MITM]).</p>
+                    
+                    <p><strong>Ventajas:</strong> Seguridad robusta al enviar correos, evita espionaje de credenciales, fácil de implementar, ampliamente soportado por proveedores de correo.</p>
+                    
+                    <p><strong>Limitaciones:</strong> Requiere certificados válidos, posible incompatibilidad si el servidor no soporta TLS, configuración incorrecta puede dejar el servicio vulnerable.</p>
+                    
+                    <p><strong>Ejemplo de uso:</strong> Envío seguro de correos desde aplicaciones web usando el puerto 465 o 587 con TLS/SSL.</p>
+                </div>
+
+                <div class="protocol-card card">
+                    <h3>📩 IMAPS (Internet Message Access Protocol Secure)</h3>
+                    <p><strong>Función principal:</strong> Permitir el acceso y la gestión de correos almacenados en un servidor de manera segura mediante IMAP sobre TLS/SSL.</p>
+                    
+                    <p><strong>Capa del modelo OSI:</strong> Capa de aplicación (Capa 7)</p>
+                    
+                    <p><strong>Tipo de seguridad:</strong> Cifrado TLS/SSL, autenticación segura, protección contra interceptación y manipulación de mensajes.</p>
+                    
+                    <p><strong>Ventajas:</strong> Permite sincronización en múltiples dispositivos, mantiene los correos en el servidor, comunicación completamente cifrada, mayor seguridad frente a IMAP estándar.</p>
+                    
+                    <p><strong>Limitaciones:</strong> Requiere certificados válidos, puede consumir más recursos del servidor, depende de la disponibilidad de red para acceder al correo.</p>
+                    
+                    <p><strong>Ejemplo de uso:</strong> Acceso seguro a buzones de correo desde aplicaciones como Outlook, Thunderbird o dispositivos móviles usando puertos como 993.</p>
+                </div>
+
+                <div class="protocol-card card">
+                    <h3>🔑 OAuth (Open Authorization)</h3>
+                    <p><strong>Función principal:</strong> Proporcionar un mecanismo seguro para que aplicaciones obtengan acceso limitado a recursos de un usuario en un servidor, sin necesidad de compartir la contraseña del usuario.</p>
+                    
+                    <p><strong>Capa del modelo OSI:</strong> Capa de aplicación (Capa 7)</p>
+                    
+                    <p><strong>Tipo de seguridad:</strong> Tokens de acceso, autorización delegada, protección contra robo de credenciales, autenticación basada en servidores confiables.</p>
+                    
+                    <p><strong>Ventajas:</strong> Evita compartir contraseñas, acceso granular a recursos, compatible con servicios modernos (Google, Facebook, Microsoft), altamente seguro con HTTPS.</p>
+                    
+                    <p><strong>Limitaciones:</strong> Implementación compleja, requiere servidores de autorización, tokens pueden ser vulnerables sin HTTPS, depende de la correcta configuración del flujo de autorización.</p>
+                    
+                    <p><strong>Ejemplo de uso:</strong> Inicio de sesión con Google o Facebook en aplicaciones web mediante intercambio de tokens de acceso.</p>
+                </div>
+            </div>
+            
+            <h2>Demostración Práctica</h2>    
+            <div class="card">
+                <p>Como parte de la actividad se realizó un video que explica el funcionamiento de los protocolos, realizando una simulacion:</p>
+                
+                <div class="video-container">
+                    <iframe width="813" height="466" 
+                        src="https://www.youtube.com/embed/ltJ_WU2lc3c"
+                        title="EQUIPO 5   PROTOCOLO DE SEGURIDAD"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <!-- CONTENEDOR FLEX PARA ALINEAR TEXTO Y BOTÓN -->
+                <div class="video-footer">
+                    <p><em>Si el video no aparece, puede dar clic al siguiente boton: </em></p>
+
+                    <a href="https://www.youtube.com/watch?v=ltJ_WU2lc3c" 
+                    target="_blank" 
+                    class="btn-video">
+                    Ver en YouTube
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Referencias y Recursos Adicionales</h2>
+                <h3>Fuentes de Investigación</h3>
+                <ul class="references">
+                    <li>López, P. (2021, septiembre 22). ¿Qué es SMTP y para qué sirve? GEEKNETIC. https://www.geeknetic.es/SMTP/que-es-y-para-que-sirve?</li>
+                    <li>Jiménez, J. (2024, 28 de agosto). Protocolo IMAP de email: ¿Qué es y cómo configurarlo?. RedesZone. https://www.redeszone.net/tutoriales/internet/que-es-protocolo-imap/</li>
+                    <li>Auth0 Docs. (s/f). Introduction to identity and access management (IAM). Recuperado de https://auth0.com/docs/get-started/identity-fundamentals/identity-and-access-management</li>
+                </ul>
+                
+                <h3>Herramientas Utilizadas</h3>
+                <ul class="references">
+                    <li>☁️ Google Cloud - Para la obtencion de los tokens OAuth 2.0</li>
+                    <li>📧 MailHog — Para pruebas de envío de correos porque actúa como un "servidor de correo falso".</li>
+                    <li>👤 Thunderbird — Para hacer pruebas como "cliente real" y verificar el funcionamiento.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="container">
@@ -485,56 +640,46 @@
     </footer>
 
     <script>
-
+        // Navegación por pestañas
         document.addEventListener('DOMContentLoaded', function() {
             const tabs = document.querySelectorAll('.nav-tab');
-            const contents = document.querySelectorAll('.tab-content');
-
-            function activateTab(tabEl) {
-                // classes
-                tabs.forEach(t => {
-                    t.classList.toggle('active', t === tabEl);
-                    t.setAttribute('aria-selected', t === tabEl ? 'true' : 'false');
-                });
-
-                // show/hide panels
-                const tabId = tabEl.getAttribute('data-tab');
-                contents.forEach(panel => {
-                    if (panel.id === tabId) {
-                        panel.classList.add('active');
-                        panel.removeAttribute('hidden');
-                    } else {
-                        panel.classList.remove('active');
-                        panel.setAttribute('hidden', '');
-                    }
-                });
-            }
-
+            
             tabs.forEach(tab => {
                 tab.addEventListener('click', function() {
-                    activateTab(this);
-                });
-                tab.addEventListener('keydown', function(e) {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        activateTab(this);
+                    // Remover clase activa de todas las pestañas
+                    tabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Agregar clase activa a la pestaña clickeada
+                    this.classList.add('active');
+                    
+                    // Ocultar todo el contenido
+                    const contents = document.querySelectorAll('.tab-content');
+                    contents.forEach(content => content.classList.remove('active'));
+                    
+                    // Mostrar el contenido correspondiente
+                    const tabId = this.getAttribute('data-tab');
+                    if (tabId) {
+                        document.getElementById(tabId).classList.add('active');
                     }
                 });
             });
-
-            // Inicializar tema desde localStorage
+            
+            // Función para cambiar el tema
             const themeToggle = document.getElementById('themeToggle');
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            
+            // Aplicar el tema guardado
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            
             themeToggle.addEventListener('click', function() {
-                const current = document.documentElement.getAttribute('data-theme') || 'light';
-                const next = current === 'dark' ? 'light' : 'dark';
-                document.documentElement.setAttribute('data-theme', next);
-                localStorage.setItem('theme', next);
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
             });
-
-            // logs de carga
+            
+            // Simulación de carga de datos
             console.log("Página cargada correctamente");
             console.log("Equipos participantes: 6");
             console.log("Protocolos asignados: 11");
