@@ -65,7 +65,12 @@
             </div>
         </div>
 
-        <!-- EQUIPO 1 -->
+
+
+
+
+
+        <!---------------------------------------------------------------------------- EQUIPO 5 -------------------------------------------------------------------->
         <div id="team1" class="tab-content">
             <div class="card">
                 <h2>Equipo 1</h2>
@@ -74,7 +79,14 @@
             </div>
         </div>
 
-        <!-- EQUIPO 2 -->
+
+
+
+
+
+
+
+        <!---------------------------------------------------------------------------- EQUIPO2 -------------------------------------------------------------------->
         <div id="team2" class="tab-content">
             <div class="card">
                 <h2>Equipo 2</h2>
@@ -83,7 +95,13 @@
             </div>
         </div>
 
-        <!-- EQUIPO 3 - TU EQUIPO -->
+
+
+
+
+
+
+        <!---------------------------------------------------------------------------- EQUIPO 3 -------------------------------------------------------------------->
         <div id="team3" class="tab-content">
             <h2>Nuestro Equipo</h2>
             <p>Somos un equipo de 6 estudiantes trabajando en conjunto para investigar y presentar los protocolos IPSec y SET:</p>
@@ -186,7 +204,14 @@
             </div>
         </div>
 
-        <!-- EQUIPO 4 -->
+
+
+
+
+
+
+
+        <!--------------------------------------------------------------------------- EQUIPO 4 ----------------------------------------------------------------->
         <div id="team4" class="tab-content">
             <div class="card">
                 <h2>Equipo 4</h2>
@@ -195,12 +220,135 @@
             </div>
         </div>
 
-        <!-- EQUIPO 5 -->
+
+
+
+
+
+
+        <!---------------------------------------------------------------------------- EQUIPO 5 -------------------------------------------------------------------->
         <div id="team5" class="tab-content">
+            <h2>Nuestro Equipo</h2>
+            <p>Nuestro equipo fue designado para describir los protocolos SMTPS, IMAPS  y OAuth</p>
+            
+            <div class="team-members">
+                <div class="member card">
+                    <img src="images\equipo5\boomer.jpeg" alt="Foto del integrante 1" class="member-photo">
+                    <h4>Oscar Leonel Carrillo Dzul</h4>
+                </div>
+                <div class="member card">
+                    <img src="images\equipo5\cheve.jpeg" alt="Foto del integrante 2" class="member-photo">
+                    <h4>Luis Vicente Echeverria Perez</h4>
+                </div>
+                <div class="member card">
+                    <img src="images\equipo5\marvic.jpeg" alt="Foto del integrante 3" class="member-photo">
+                    <h4>Marvic Adriel May Salazar</h4>
+                </div>
+                <div class="member card">
+                    <img src="images\equipo5\pablo.jpg" alt="Foto del integrante 4" class="member-photo">
+                    <h4>Pablo David Uitz Uitz</h4>
+                </div>
+                <div class="member card">
+                    <img src="images\equipo5\pulpazo.jpeg" alt="Foto del integrante 5" class="member-photo">
+                    <h4>Angel Erubiel Carrillo Vazquez</h4>
+                </div>
+            </div>
+
+            <h2>Protocolos de Seguridad</h2>
+            
+            <div class="protocol-section">
+                <div class="protocol-card card">
+                        <h3>✉️ SMTPS (Simple Mail Transfer Protocol Secure)</h3>
+
+                        <p><strong>Función principal:</strong> Proporcionar un envío de correo electrónico seguro mediante el uso de SMTP sobre TLS/SSL, garantizando que la comunicación entre el cliente y el servidor esté cifrada.</p>
+
+                        <p><strong>Capa del modelo OSI:</strong> Capa de aplicación (Capa 7)</p>
+
+                        <p><strong>Tipo de seguridad:</strong> Cifrado TLS/SSL, autenticación del servidor, protección contra interceptación (Men In The Middle [MITM]).</p>
+
+                        <p><strong>Ventajas:</strong> Seguridad robusta al enviar correos, evita espionaje de credenciales, fácil de implementar, ampliamente soportado por proveedores de correo.</p>
+
+                        <p><strong>Limitaciones:</strong> Requiere certificados válidos, posible incompatibilidad si el servidor no soporta TLS, configuración incorrecta puede dejar el servicio vulnerable.</p>
+
+                        <p><strong>Ejemplo de uso:</strong> Envío seguro de correos desde aplicaciones web usando el puerto 465 o 587 con TLS/SSL.</p>
+                </div>
+
+                <div class="protocol-card card">
+                        <h3>📩 IMAPS (Internet Message Access Protocol Secure)</h3>
+
+                        <p><strong>Función principal:</strong> Permitir el acceso y la gestión de correos almacenados en un servidor de manera segura mediante IMAP sobre TLS/SSL.</p>
+
+                        <p><strong>Capa del modelo OSI:</strong> Capa de aplicación (Capa 7)</p>
+
+                        <p><strong>Tipo de seguridad:</strong> Cifrado TLS/SSL, autenticación segura, protección contra interceptación y manipulación de mensajes.</p>
+
+                        <p><strong>Ventajas:</strong> Permite sincronización en múltiples dispositivos, mantiene los correos en el servidor, comunicación completamente cifrada, mayor seguridad frente a IMAP estándar.</p>
+
+                        <p><strong>Limitaciones:</strong> Requiere certificados válidos, puede consumir más recursos del servidor, depende de la disponibilidad de red para acceder al correo.</p>
+
+                        <p><strong>Ejemplo de uso:</strong> Acceso seguro a buzones de correo desde aplicaciones como Outlook, Thunderbird o dispositivos móviles usando puertos como 993.</p>
+                </div>
+
+                <div class="protocol-card card">
+                    <h3>🔑 OAuth (Open Authorization)</h3>
+
+                    <p><strong>Función principal:</strong> Proporcionar un mecanismo seguro para que aplicaciones obtengan acceso limitado a recursos de un usuario en un servidor, sin necesidad de compartir la contraseña del usuario.</p>
+
+                    <p><strong>Capa del modelo OSI:</strong> Capa de aplicación (Capa 7)</p>
+
+                    <p><strong>Tipo de seguridad:</strong> Tokens de acceso, autorización delegada, protección contra robo de credenciales, autenticación basada en servidores confiables.</p>
+
+                    <p><strong>Ventajas:</strong> Evita compartir contraseñas, acceso granular a recursos, compatible con servicios modernos (Google, Facebook, Microsoft), altamente seguro con HTTPS.</p>
+
+                    <p><strong>Limitaciones:</strong> Implementación compleja, requiere servidores de autorización, tokens pueden ser vulnerables sin HTTPS, depende de la correcta configuración del flujo de autorización.</p>
+
+                    <p><strong>Ejemplo de uso:</strong> Inicio de sesión con Google o Facebook en aplicaciones web mediante intercambio de tokens de acceso.</p>
+                </div>
+            </div>
+            
+        <h2>Demostración Práctica</h2>    
             <div class="card">
-                <h2>Equipo 5</h2>
-                <p>Contenido del equipo 5...</p>
-                <p>Aquí puedess agregar información sobre los protocolos que investigó el equipo 5.</p>
+                <p>Como parte de la actividad se realizó un video que explica el funcionamiento de los protocolos, realizando una simulacion:</p>
+                
+                <div class="video-container">
+                    <iframe width="813" height="466" 
+                        src="https://www.youtube.com/embed/ltJ_WU2lc3c"
+                        title="EQUIPO 5   PROTOCOLO DE SEGURIDAD"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <!-- CONTENEDOR FLEX PARA ALINEAR TEXTO Y BOTÓN -->
+                <div class="video-footer">
+                    <p><em>Si el video no aparece, puede dar clic al siguiente boton: </em></p>
+
+                    <a href="https://www.youtube.com/watch?v=ltJ_WU2lc3c" 
+                    target="_blank" 
+                    class="btn-video">
+                    Ver en YouTube
+                    </a>
+                </div>
+            </div>
+
+        </div>
+            <div class="card">
+                <h2>Referencias y Recursos Adicionales</h2>
+                <h3>Fuentes de Investigación</h3>
+                <ul class="references">
+                    <li>López, P. (2021, septiembre 22). ¿Qué es SMTP y para qué sirve? GEEKNETIC. https://www.geeknetic.es/SMTP/que-es-y-para-que-sirve?  </li>
+                    <li>Jiménez, J. (2024, 28 de agosto). Protocolo IMAP de email: ¿Qué es y cómo configurarlo?. RedesZone. https://www.redeszone.net/tutoriales/internet/que-es-protocolo-imap/</li>
+                    <li> Auth0 Docs. (s/f). Introduction to identity and access management (IAM). Recuperado de https://auth0.com/docs/get-started/identity-fundamentals/identity-and-access-management </li>
+                </ul>
+                
+                <h3>Herramientas Utilizadas</h3>
+                <ul class="references">
+                    <li>☁️ Google Cloud - Para la obtencion de los tokens OAuth 2.0</li>
+                    <li>📧 MailHog — Para pruebas de envío de correos porque actúa como un “servidor de correo falso”.</li>
+                    <li>👤 Thunderbird — Para hacer pruebas como “cliente real” y verificar el funcionamiento.</li>
+                </ul>
             </div>
         </div>
 
@@ -208,7 +356,7 @@
     <footer>
         <div class="container">
             <p>Proyecto de Seguridad Informática - Protocolos de Seguridad en la Red</p>
-            <p>Cuatrimestre: IDS – 7A | Fecha de entrega: 14 de Noviembre de 2025</p>
+            <p>Cuatrimestre: IDS - 7A | Fecha de entrega: 14 de Noviembre de 2025</p>
             <p>Profesor: I.S.C Emmanuel de Atocha Perez Ojeda</p>
         </div>
     </footer>
